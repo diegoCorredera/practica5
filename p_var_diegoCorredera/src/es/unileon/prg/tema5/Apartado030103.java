@@ -1,4 +1,5 @@
 package es.unileon.prg.tema5;
+import 	java.util.Random;
 
 /**
  * Clase con los ejercicios correspondientes a operadores matematicos. La clase
@@ -29,7 +30,10 @@ public class Apartado030103 extends Apartado {
 		cabecera("01", "Calcular la raiz cuadrada de un numero");
 
 		// Inicio modificacion
+		double raiz = Math.sqrt(25);
+		System.out.println("la raiz de 25 es " + raiz);
 		// Fin modificacion
+
 	}
 
 	/**
@@ -45,6 +49,8 @@ public class Apartado030103 extends Apartado {
 		cabecera("02", "Calcular potencias");
 
 		// Inicio modificacion
+		int potencia = 9^3;
+		System.out.println("el cubo de nueve es "+ potencia);
 		// Fin modificacion
 	}
 
@@ -58,8 +64,11 @@ public class Apartado030103 extends Apartado {
 	 */
 	public void ejercicio03() {
 		cabecera("03", "Generar numeros aleatorios");
+		Random aleatorio = new Random();
 
 		// Inicio modificacion
+		int numerogenerado = aleatorio.nextInt(5, 10);
+		System.out.println("el numero es " + numerogenerado);
 		// Fin modificacion
 	}
 
@@ -75,6 +84,9 @@ public class Apartado030103 extends Apartado {
 		cabecera("04", "Calcular la superficie de un circulo");
 
 		// Inicio modificacion
+		int radio = 10^2;
+		double superficie = Math.PI * (double)radio;
+		System.out.println("superficie es " + superficie);
 		// Fin modificacion
 	}
 }
