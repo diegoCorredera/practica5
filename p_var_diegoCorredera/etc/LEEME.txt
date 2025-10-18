@@ -5,5 +5,18 @@ Alumno:
 Horas dedicadas:
 
 Problemas surgidos al realizar la practica:
-
+el generador aleatorio de math por defecto no está preparado para sacar un 
+aleatorio definido en un espacio acotado de números
 Respuestas a la preguntas:
+pregunta 04- devuelve 1.299999 en lugar de 1.3 ya que es double e intentará rellenarcon el 
+dígito más largo posible y más cercano hacia abajo
+
+pregunta 05- devuelve 1.3 ya que es bigdecimal, una clase de envoltura preparada para admitir 
+números y datos de elementos externos y convertirlos de manera exacta en enteros o decimales 
+legibles para java
+
+pregunta 4 030104- le puse el término f para que coja java que es un float
+
+030203- 01- sale todo hasta NIU, porque está así escrito, el NIU nombre y nota salen 
+por el append de la clase alumno ya que la nombra, y funciona con un append de las distintas
+frases que recibe del ejercicio

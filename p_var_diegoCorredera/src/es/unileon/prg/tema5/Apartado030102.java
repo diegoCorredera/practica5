@@ -1,5 +1,5 @@
 package es.unileon.prg.tema5;
-
+import java.util.Scanner;
 /**
  * Clase con los ejercicios correspondientes a operadores.
  *
@@ -7,7 +7,7 @@ package es.unileon.prg.tema5;
  * @version 1.0
  */
 public class Apartado030102 extends Apartado {
-
+	
 	protected String obtenerPractica(){
 		return "P-VAR";
 	}
@@ -28,13 +28,17 @@ public class Apartado030102 extends Apartado {
 
 		// Inicio modificacion
 		final int CONST=128;
-		int op1;
+		int op1=0;
 		int op2;
 		int resultado;
 		//Preincrementa op1 y multiplicalo por 12
+		op1 +=op1*12;
 		//El valor de op2 es la suma op1 predecrementado con CONST
+		op2= (op1++) + CONST;
 		//Halla el resto de dividir op2 entre op1 y guardalo en resultado
+		resultado = op2%op1;
 		//Muestra por pantalla los valores de op1, op2 y resultado
+		System.out.println("op1 = " + op1 + " op2 = " + op2 + "resultado = " + resultado);
       // Fin modificacion
 	}
 
@@ -45,18 +49,38 @@ public class Apartado030102 extends Apartado {
 	 *
 	 * Se pide completar el codigo para calcular el valor de rebaja
 	 */
-	public void ejercicio02() {
+	public void ejercicio02() 
+	{
+		Scanner entrada = new Scanner(System.in);
 		cabecera("02", "Utilizacion de operadores logicos");
 
 		// Inicio modificacion
 		int edad;
 		int numeroPartes;
 		boolean deportivo;
-		boolean rebaja;
+		boolean rebaja=false;
+		String esdeportivo="";
 		// rebaja = expresion booleana
-        /* DESCOMENTAR
+         //DESCOMENTAR
+		 System.out.println("introduzca edad");
+		 edad = Integer.parseInt(entrada.nextLine()) ;
+		System.out.println("introduzca numero de partes");
+		numeroPartes = Integer.parseInt(entrada.nextLine());
+		while(!esdeportivo.equals("si") && !esdeportivo.equals("no"))
+		{
+		System.out.println("es deportivo si o no");
+		esdeportivo = entrada.nextLine();
+		}
+		if (esdeportivo.equals("si"))
+		{
+			rebaja = false;
+		}
+		else if(edad > 4 && numeroPartes > 5)
+		{
+			rebaja = true;
+		}
 		System.out.println("Rebaja = " + rebaja);
-		*/
+		
 		// Fin modificacion
 	}
 
@@ -67,16 +91,21 @@ public class Apartado030102 extends Apartado {
 	 *
 	 * Se pide calcular cuantas horas, minutos y segundos hay en 56000 segundos
 	 */
-	public void ejercicio03() {
+	public void ejercicio03()
+	 {
 		cabecera("03", "Calculos aritmeticos");
 
 		// Inicio modificacion
 		int segundos, horas, minutos;
 		int totalSegundos=56000;
 		// Realizacion de calculos
-         /* DESCOMENTAR
+		horas = totalSegundos/3600;
+		minutos = (totalSegundos%3600)/60;
+		segundos = (totalSegundos%3600)%60;
+         // DESCOMENTAR
+
 		System.out.println(horas+"h "+minutos+"m "+segundos+"s ");
-		*/
+		
 		// Fin modificacion
 	}
 }

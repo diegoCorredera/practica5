@@ -31,6 +31,16 @@ public class Profesor {
 	public Profesor(String niu, String nombre) {
 		this.niu = niu;
 		this.nombre = nombre;
+
+	}
+
+	public String toString()
+	{
+		StringBuffer respuesta = new StringBuffer();
+		respuesta.append(" NIU es "+ this.niu + "");
+		respuesta.append(" nombre del profe " + this.nombre + "");
+
+		return respuesta.toString();
 	}
 }
 
